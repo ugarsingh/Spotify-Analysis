@@ -31,14 +31,6 @@ Turn a raw, messy music dataset into a clean, explorable dashboard that answers 
 | **Artists** | Artist selector, popular artists, number of songs per artist, song genre breakdown, and an Artists Overview chart comparing average popularity with views |
 | **Songs** | Song details panel (artist, total songs, position, genre, release date), popular songs, and an "Overview of Song" trend chart for popularity, position, and views |
 
-| Home | Overview |
-|---|---|
-| ![Home](Spotify_Home_Page.png) | ![Overview](Spotify_Overview_Page.png)  |
-
-| City Performance | Home |
-|---|---|
-| ![Artists](Spotify_Artists_Page.png) | ![Songs](Spotify_Song_Page.png) |
-
 ## Features
 - **Single-page, app-style navigation**: bookmarks plus grouped show/hide visuals in the Selection Pane switch between Home, Overview, Artists, and Songs without extra report pages
 - **Custom tooltip page**: hovering over a song shows its cover art, artist, song title, release date, position, genre, explicit flag, and popularity trend
@@ -53,11 +45,6 @@ Turn a raw, messy music dataset into a clean, explorable dashboard that answers 
 - Power BI Desktop (data modeling and visualization)
 - DAX (measures)
 - Bookmarks, Selection Pane, Tooltip pages, Slicers
-
-## Data Pipeline
-```
-Raw CSV  →  Pandas cleaning (Jupyter)  →  Cleaned CSV  →  Power BI (DAX + visuals)
-```
 
 ## Data Cleaning Steps (Python / Pandas)
 > Replace these with your actual steps and numbers from `notebooks/data_cleaning.ipynb`.
@@ -91,24 +78,5 @@ spotify-powerbi-dashboard/
 └── README.md
 ```
 
-## How to Use
-1. Download `Spotify_Dashboard.pbix` and open it in **Power BI Desktop**
-2. If Power BI asks for the data source, point it to `data/cleaned/` in your local copy
-3. Use the **Home / Overview / Artists / Songs** buttons to navigate, and hover over a song to see the tooltip
-4. To reproduce the cleaning, open `notebooks/data_cleaning.ipynb`, update the file path in the first `pd.read_csv(...)` cell, and run all cells top to bottom
 
-## Possible Next Steps
-- Publish the report to Power BI Service and add a live link
-- Add a genre-level drill-through page
-- Add a forecast for the popularity trend
-- Add more years of data for deeper trend analysis
 
-## Dataset Source
-Raw dataset from Spotify_Noisy_Data.xls.
-
-## Disclaimer
-This is an independent portfolio project. Spotify, album art, and artist names belong to their respective owners and are used here for educational purposes only.
-
-## Author
-**Sidharth Arora**
-[GitHub](https://github.com/SCArora03) | [LinkedIn](https://linkedin.com/in/sidharth-arora-6a12a2273)
